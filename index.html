@@ -12,8 +12,8 @@
     <main>
         <h1>Search for National Parks!</h1>
         <form>
-            <label>State Code: <input type="text" value="CO" name="state" id="state" required></label><br>
-            <label>Max Results: <input type="text" value="10" name="maxResults" id="maxResults" required></label><br>
+            <label>State Code: <input type="text" value="CO" name="state" id="state" minlength="2" maxlength="2" required></label><br>
+            <label>Max Results (1-50): <input type="text" value="10" name="maxResults" id="maxResults" required></label><br>
             <input type="submit" value="Find Parks">
         </form>
         <p class="error-message"></p>
