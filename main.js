@@ -1,15 +1,13 @@
 
 
-const APIKey = 'WJK9GqpmrJyNuGyLLzMgrmPp7FrWpGjt1RUKfFaV'
-const searchURL = 'https://developer.nps.gov/api/v1/parks'
+const APIKey = 'WJK9GqpmrJyNuGyLLzMgrmPp7FrWpGjt1RUKfFaV';
+const searchURL = 'https://developer.nps.gov/api/v1/parks';
 
 function formatQueryParams(params) {
     const queryItems = Object.keys(params)
-        .map(key => `${key}=${params[key]}`)
+        .map(key => `${key}=${params[key]}`);
     return queryItems.join('&');
-}
-    const geoAPIKey = '7de1b0ccc7cc4ec4bd998b0e6370f8d5'
-    const geoSearchURL = 'https://api.opencagedata.com/geocode/v1/json'
+};
 
 function displayResults(responseJson) {
     console.log(responseJson);
@@ -29,6 +27,7 @@ function displayResults(responseJson) {
 };
 
 function getStateParks(state, maxResults) {
+    state = state.replace(/\s+/g, '');
     const params= {
         stateCode: state,
         api_key: APIKey,
